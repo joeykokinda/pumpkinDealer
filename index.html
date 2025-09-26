@@ -19,66 +19,50 @@ Option B: Record 1 = vCard, Record 2 = sms:+16107011998?body=Hi%20Pumpkin%20Deal
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            background: #000000;
+            color: #00C853;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(0, 200, 83, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 122, 0, 0.1) 0%, transparent 50%);
-            animation: backgroundPulse 4s ease-in-out infinite alternate;
+            margin: 0;
         }
 
-        @keyframes backgroundPulse {
-            0% { background-size: 100% 100%; }
-            100% { background-size: 110% 110%; }
-        }
 
         .card {
-            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            background: #000000;
             border: 2px solid #00C853;
-            border-radius: 24px;
+            border-radius: 0;
             padding: 40px 30px;
             max-width: 400px;
             width: 100%;
             text-align: center;
             box-shadow: 
-                0 0 30px rgba(0, 200, 83, 0.3),
-                0 20px 40px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            animation: cardGlow 3s ease-in-out infinite alternate;
+                0 0 20px rgba(0, 200, 83, 0.5),
+                inset 0 0 1px rgba(0, 200, 83, 0.3);
+            position: relative;
         }
 
-        @keyframes cardGlow {
-            0% { box-shadow: 0 0 30px rgba(0, 200, 83, 0.3), 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-            100% { box-shadow: 0 0 40px rgba(0, 200, 83, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1); }
-        }
 
         .title {
             font-size: 2.5rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #FF7A00;
             margin-bottom: 16px;
-            text-shadow: 
-                0 0 20px rgba(255, 122, 0, 0.8),
-                0 0 40px rgba(255, 122, 0, 0.4);
-            animation: titleGlow 2s ease-in-out infinite alternate;
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 10px rgba(255, 122, 0, 0.5);
+            letter-spacing: 2px;
         }
 
-        @keyframes titleGlow {
-            0% { text-shadow: 0 0 20px rgba(255, 122, 0, 0.8), 0 0 40px rgba(255, 122, 0, 0.4); }
-            100% { text-shadow: 0 0 30px rgba(255, 122, 0, 1), 0 0 60px rgba(255, 122, 0, 0.6); }
-        }
 
         .subtitle {
             font-size: 1.1rem;
-            color: #cccccc;
+            color: #00C853;
             margin-bottom: 40px;
             line-height: 1.5;
+            font-family: 'Courier New', monospace;
         }
 
         .buttons {
@@ -92,17 +76,19 @@ Option B: Record 1 = vCard, Record 2 = sms:+16107011998?body=Hi%20Pumpkin%20Deal
             display: inline-block;
             padding: 16px 24px;
             min-height: 56px;
-            border: none;
-            border-radius: 16px;
+            border: 2px solid #FF7A00;
+            border-radius: 0;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             position: relative;
-            overflow: hidden;
             text-align: center;
             line-height: 1.4;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .btn:focus {
@@ -111,63 +97,22 @@ Option B: Record 1 = vCard, Record 2 = sms:+16107011998?body=Hi%20Pumpkin%20Deal
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #FF7A00, #FF9500);
-            color: #000000;
-            box-shadow: 
-                0 0 20px rgba(255, 122, 0, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.3);
+            background: #000000;
+            color: #FF7A00;
+            box-shadow: 0 0 10px rgba(255, 122, 0, 0.3);
         }
 
         .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 
-                0 0 30px rgba(255, 122, 0, 0.6),
-                0 12px 24px rgba(0, 0, 0, 0.4);
+            background: #FF7A00;
+            color: #000000;
+            box-shadow: 0 0 20px rgba(255, 122, 0, 0.8);
         }
 
         .btn-primary:active {
-            transform: translateY(0);
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, #00C853, #00E676);
+            background: #FF7A00;
             color: #000000;
-            box-shadow: 
-                0 0 20px rgba(0, 200, 83, 0.4),
-                0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
-        .btn-secondary:hover {
-            transform: translateY(-2px);
-            box-shadow: 
-                0 0 30px rgba(0, 200, 83, 0.6),
-                0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-secondary:active {
-            transform: translateY(0);
-        }
-
-        .fallback-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .btn-fallback {
-            background: rgba(255, 255, 255, 0.1);
-            color: #cccccc;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 0.9rem;
-            padding: 12px 16px;
-            min-height: 48px;
-        }
-
-        .btn-fallback:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
-        }
 
         .footer {
             font-size: 0.85rem;
@@ -210,11 +155,7 @@ Option B: Record 1 = vCard, Record 2 = sms:+16107011998?body=Hi%20Pumpkin%20Deal
 
         @media (min-width: 768px) {
             .buttons {
-                flex-direction: row;
-            }
-            
-            .fallback-buttons {
-                flex-direction: row;
+                flex-direction: column;
             }
         }
     </style>
@@ -228,15 +169,10 @@ Option B: Record 1 = vCard, Record 2 = sms:+16107011998?body=Hi%20Pumpkin%20Deal
             <a href="sms:+16107011998?body=WHERE%20MY%20PUMPKIN%20AT" 
                class="btn btn-primary"
                aria-label="Send SMS to request a pumpkin">
-                💬 Request a Pumpkin
+                Request a Pumpkin
             </a>
         </div>
         
-        <div class="fallback-buttons">
-            <button onclick="copySMS()" class="btn btn-fallback" aria-label="Copy SMS message to clipboard">
-                📋 Copy SMS Text
-            </button>
-        </div>
         
         <footer class="footer">
             <p>If your phone doesn't auto-open, long-press to copy the link, then paste into your app.</p>
